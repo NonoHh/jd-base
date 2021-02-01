@@ -2,9 +2,12 @@ panel/node_modules*
 panel/yarn.lock
 panel/package-lock.json
 scripts*
+scripts2*
 log*
 config*
 version
 new_task
 drop_task
 send_count
+run.py
+package-lock.json
