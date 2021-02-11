@@ -1,6 +1,6 @@
-## Version: v3.26.0
-## Date: 2021-02-07
-## Update Content: 移除过期活动
+## Version: v3.27.0
+## Date: 2021-02-11
+## Update Content: 增加Global活动互助码
 
 ## 上面版本号中，如果第2位数字有变化，那么代表增加了新的参数，如果只有第3位数字有变化，仅代表更新了注释，没有增加新的参数，可更新可不更新
 ## 如需更新，请参考WIKI（https://github.com/EvineDeng/jd-base/wiki）中"如何更新配置文件"部分的操作说明，进行智能比对后修改。
@@ -82,37 +82,6 @@ RandomDelay="300"
 ## 1. ServerChan，教程：http://sc.ftqq.com/3.version
 export PUSH_KEY=""
 
-## 2. BARK，教程（看BARK_PUSH和BARK_SOUND的说明）：https://github.com/LXK9301/jd_scripts/blob/master/githubAction.md#%E4%B8%8B%E6%96%B9%E6%8F%90%E4%BE%9B%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84-secrets%E5%85%A8%E9%9B%86%E5%90%88
-export BARK_PUSH=""
-export BARK_SOUND=""
-
-## 3. Telegram，如需使用，TG_BOT_TOKEN和TG_USER_ID必须同时赋值，教程：https://github.com/LXK9301/jd_scripts/blob/master/backUp/TG_PUSH.md
-export TG_BOT_TOKEN=""
-export TG_USER_ID=""
-
-## 4. 钉钉，教程（看DD_BOT_TOKEN和DD_BOT_SECRET部分）：https://github.com/LXK9301/jd_scripts/blob/master/githubAction.md#%E4%B8%8B%E6%96%B9%E6%8F%90%E4%BE%9B%E4%BD%BF%E7%94%A8%E5%88%B0%E7%9A%84-secrets%E5%85%A8%E9%9B%86%E5%90%88
-export DD_BOT_TOKEN=""
-export DD_BOT_SECRET=""
-
-## 5. iGot聚合推送，支持多方式推送，填写iGot的推送key。教程：https://wahao.github.io/Bark-MP-helper/#/
-export IGOT_PUSH_KEY=""
-
-## 6. 酷推(Cool Push)，向QQ发送推送消息，参考文档：https://cp.xuthus.cc ，其中QQ_MODE的可选项有（默认send）：send[私聊]、group[群聊]、wx[个微]、ww[企微]、email[邮件]
-export QQ_SKEY=""
-export QQ_MODE=""
-
-## 7. Push Plus，微信扫码登录后一对一推送或一对多推送，参考文档：http://pushplus.hxtrip.com/
-## 其中PUSH_PLUS_USER是一对多推送的“群组编码”（一对多推送下面->您的群组(如无则新建)->群组编码）注:(1、需订阅者扫描二维码 2、如果您是创建群组所属人，也需点击“查看二维码”扫描绑定，否则不能接受群组消息推送)，只填PUSH_PLUS_TOKEN默认为一对一推送
-export PUSH_PLUS_TOKEN=""
-export PUSH_PLUS_USER=""
-
-## 8. 企业微信机器人消息推送 webhook 后面的 key，文档：https://work.weixin.qq.com/api/doc/90000/90136/91770
-export QYWX_KEY=""
-
-## 9. 企业微信应用消息推送的值，文档：https://work.weixin.qq.com/api/doc/90000/90135/90236 
-## 依次填上corpid的值,corpsecret的值,touser的值,agentid,media_id的值，注意用,号隔开，例如："wwcff56746d9adwers,B-791548lnzXBE6_BWfxdf3kSTMJr9vFEPKAbh6WERQ,mingcheng,1000001,2COXgjH2UIfERF2zxrtUOKgQ9XklUqMdGSWLBoW_lSDAdafat"
-export QYWX_AM=""
-
 
 ################################## 定义每日签到的通知形式（选填） ##################################
 ## js脚本每日签到提供3种通知方式，分别为：
@@ -125,6 +94,24 @@ NotifyBeanSign=""
 ################################## 定义每日签到每个接口间的延迟时间（选填） ##################################
 ## 默认每个签到接口并发无延迟，如需要依次进行每个接口，请自定义延迟时间，单位为毫秒，延迟作用于每个签到接口, 如填入延迟则切换顺序签到(耗时较长)
 export JD_BEAN_STOP=""
+
+
+################################## 定义京东Global互助（选填） ##################################
+## 具体填法及要求详见：https://github.com/EvineDeng/jd-base/wiki/FAQ
+## 仅2021年2月8日(含)前有效
+MyJdGlobal1=""
+MyJdGlobal2=""
+MyJdGlobal3=""
+MyJdGlobal4=""
+MyJdGlobal5=""
+MyJdGlobal6=""
+
+ForOtherJdGlobal1=""
+ForOtherJdGlobal2=""
+ForOtherJdGlobal3=""
+ForOtherJdGlobal4=""
+ForOtherJdGlobal5=""
+ForOtherJdGlobal6=""
 
 
 ################################## 定义京东新年压岁钱互助（选填） ##################################
