@@ -31,6 +31,8 @@ isTermux=${ANDROID_RUNTIME_ROOT}${ANDROID_ROOT}
 WhichDep=$(grep "/jd-base" "${ShellDir}/.git/config")
 Scripts2URL=https://github.com/shylocks/Loon
 
+sed -i 's:randomCount = :randomCount = 0 //:g' /home/ubuntu/jd/scripts/jd_*.js
+
 if [[ ${WhichDep} == *github* ]]; then
   ScriptsURL=https://github.com/LXK9301/jd_scripts
   ShellURL=https://github.com/NonoHh/jd-base
@@ -117,8 +119,7 @@ function Change_JoyRunPins {
     PinALL="${PinTempFormat},${PinALL}"
     let j--
   done
-  PinEvine="Evine,做一颗潇洒的蛋蛋,Evine007,jd_7bb2be8dbd65c,jd_6fae2af082798,jd_664ecc3b78945,277548856_m,米大眼老鼠,"
-  PinALL="${PinALL}${PinEvine}"
+  PinALL="${PinALL}"
   perl -i -pe "{s|(let invite_pins = \[\")(.+\"\];?)|\1${PinALL}\2|; s|(let run_pins = \[\")(.+\"\];?)|\1${PinALL}\2|}" ${ScriptsDir}/jd_joy_run.js
 }
 
