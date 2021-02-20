@@ -31,8 +31,6 @@ isTermux=${ANDROID_RUNTIME_ROOT}${ANDROID_ROOT}
 WhichDep=$(grep "/jd-base" "${ShellDir}/.git/config")
 Scripts2URL=https://github.com/shylocks/Loon
 
-sed -i 's:randomCount = :randomCount = 0 //:g' /home/ubuntu/jd/scripts/jd_*.js
-
 if [[ ${WhichDep} == *github* ]]; then
   ScriptsURL=https://github.com/LXK9301/jd_scripts
   ShellURL=https://github.com/NonoHh/jd-base
@@ -125,6 +123,7 @@ function Change_JoyRunPins {
 
 ## 修改lxk0301大佬js文件的函数汇总
 function Change_ALL {
+  sed -i 's:randomCount = :randomCount = 0 //:g' /home/ubuntu/jd/scripts/jd_*.js
   if [ -f ${FileConf} ]; then
     . ${FileConf}
     if [ -n "${Cookie1}" ]; then
